@@ -1,0 +1,45 @@
+package unis_code;
+
+import javax.swing.JOptionPane;
+
+public class UnisCode1 {
+
+	public static void main(String[] args) {
+		
+		float peso;
+		float altura;
+		float IMC;
+		String resp1;
+		String resp2;
+		
+		resp1 = JOptionPane.showInputDialog("Digite sua altura em Cm: ");
+		altura = Float.parseFloat(resp1);
+		
+		resp2 = JOptionPane.showInputDialog("Digite seu peso em Kg: ");
+		peso = Float.parseFloat(resp2);
+		
+		IMC = peso/(altura*altura);
+		
+		if (IMC < 17){
+			System.out.println("Você é muito abaixo de peso");	
+		}
+		else if (IMC >= 17 && IMC < 18.49) {
+			System.out.println("Você é abaixo do peso");
+		}
+		else if (IMC >= 18.50 && IMC < 24.99) {
+			System.out.println("Você tem peso normal");		
+		}
+		else if (IMC >= 25 && IMC < 29.99) {
+			System.out.println("Você é acima do peso");
+		}
+		else if (IMC >= 30 && IMC < 34.99) {
+			System.out.println("Você tem Obesidade I");
+		}
+		else if (IMC >= 35 && IMC < 39.99) {
+			System.out.println("Você tem Obesidade II (severa)");
+		}
+		else if (IMC > 40) {
+			System.out.print("Você tem Obesidade III (mórbida)");		
+		}
+	}
+}
